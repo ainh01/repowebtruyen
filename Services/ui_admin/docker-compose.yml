@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  backend:
+    image: ui_admin
+    container_name: ui-admin
+    ports:
+      - "5000:3000"
+    environment:
+      # Use key: value format to avoid quote parsing issues
+      - BASE_URL=http://134.185.90.103:80/
+    restart: unless-stopped
